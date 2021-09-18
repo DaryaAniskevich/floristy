@@ -15,9 +15,8 @@
     opacity: 0.03;
     position: absolute;
     top: 220px;
-    @include screen-max($mobile) {
-      font-size: 105px;
-      line-height: 178px;
+    @include screen-max($tablet) {
+      display: none;
     }
   }
   &-container {
