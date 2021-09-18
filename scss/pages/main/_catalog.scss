@@ -25,15 +25,12 @@
     flex-direction: column;
   }
   &-heading {
-    // text-align: center;
     margin-bottom: 120px;
     position: relative;
     @include screen-max($tablet) {
       margin-bottom: 52px;
     }
     @include screen-max($mobile) {
-      //align-self: left;
-      //text-align: left;
       margin-bottom: 20px;
     }
     &::after {
