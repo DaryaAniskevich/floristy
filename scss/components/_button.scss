@@ -1,0 +1,104 @@
+.c-button {
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $white;
+  &--menu {
+    display: flex;
+    &-burger {
+      margin-right: 17px;
+      @include screen-max($tablet) {
+        width: 35px;
+        height: auto;
+        margin-right: 0;
+      }
+      @include screen-max($mobile) {
+        width: 37px;
+      }
+    }
+    &-name {
+      @include screen-max($tablet) {
+        display: none;
+      }
+    }
+  }
+  &--bordered {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid $white;
+    padding: 18px 30px;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 0.15em;
+    &:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    @include screen-max($tablet) {
+      font-size: 15px;
+      line-height: 17px;
+      padding: 22px 40px;
+    }
+    @include screen-max($mobile) {
+      font-size: 10px;
+      line-height: 11px;
+      padding: 18px 30px;
+    }
+  }
+  &--ellipse {
+    max-width: 36.28px;
+    max-height: 56px;
+    padding-top: 157px;
+    padding-left: 130px;
+    @include screen-max($tablet) {
+      display: none;
+    }
+  }
+  &--vertical {
+    display: flex;
+    align-items: center;
+    text-transform: lowercase;
+    transform: translateX(100px) rotate(90deg);
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    align-self: center;
+    &__arrow {
+      margin-left: 30px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &--white {
+    background-color: #ffffff;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: #010001;
+    padding: 17.5px 30px;
+  }
+  &--transparent {
+    padding: 16px 30px;
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.15em;
+    background-color: #010001;
+    &:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  }
+  &--circle {
+    width: 46px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 13px 13px 17px 17px;
+    font-size: 50px;
+  }
+}

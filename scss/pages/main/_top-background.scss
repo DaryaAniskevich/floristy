@@ -1,0 +1,17 @@
+.p-m-top-background {
+  background-image: url(../images/top-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &-menu {
+    transition: 0.5s;
+  }
+  &-graditent {
+    z-index: 100;
+    padding-top: 75px;
+    background: linear-gradient(0deg, #3b181e 3.33%, rgba(59, 24, 30, 0) 100%);
+    @include screen-max($tablet) {
+      display: none;
+    }
+  }
+}

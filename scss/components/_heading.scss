@@ -1,0 +1,35 @@
+.c-heading {
+  font-size: 30px;
+  line-height: 33px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  @include screen-max($mobile) {
+    font-size: 20px;
+    line-height: 170%;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 85.5px;
+    height: 2px;
+    background-color: #ffffff;
+    @include screen-max($mobile) {
+      display: none;
+    }
+  }
+  &--without-line {
+    font-size: 50px;
+    line-height: 55px;
+    @include screen-max($tablet) {
+      font-size: 40px;
+      line-height: 44px;
+    }
+    @include screen-max($mobile) {
+      font-size: 20px;
+      line-height: 22px;
+    }
+    &::after {
+      display: none;
+    }
+  }
+}

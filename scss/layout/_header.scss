@@ -1,0 +1,27 @@
+.header {
+  padding: 87px 0 20px;
+
+  @include screen-max($tablet) {
+    padding-top: 38px;
+  }
+  @include screen-max($mobile) {
+    padding: 15px 0 20px;
+    background-color: $bg-color;
+  }
+  &--product {
+    padding: 80px 0 20px;
+    @include screen-max($tablet) {
+      padding-top: 30px;
+    }
+  }
+  &-navigation {
+    display: flex;
+    align-items: center;
+    @include screen-max($tablet) {
+      align-items: flex-start;
+    }
+  }
+  &-button-menu {
+    margin-left: auto;
+  }
+}

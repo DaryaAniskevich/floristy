@@ -1,0 +1,21 @@
+$open-sans: '../fonts/open-sans';
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+// Open Sans regular
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("#{$open-sans}/OpenSans-Regular.woff");
+    src: url("#{$open-sans}/OpenSans-Regular.woff2") format("woff2"),
+    url("#{$open-sans}/OpenSans-Regular.ttr") format("woff"),
+}
+
+// Open Sans bold
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("#{$open-sans}/OpenSans-Bold.woff");
+    src: url("#{$open-sans}/OpenSans-Bold.woff2") format("woff2"),
+    url("#{$open-sans}/OpenSans-Bold.ttr") format("woff"),
+}

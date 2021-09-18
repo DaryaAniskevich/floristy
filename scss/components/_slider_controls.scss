@@ -1,0 +1,28 @@
+.c-slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include screen-max($tablet) {
+    width: 138px;
+  }
+  @include screen-max($mobile) {
+    width: 288px;
+  }
+  &__item {
+    width: 63px;
+    height: 3px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    @include screen-max($tablet) {
+      cursor: pointer;
+    }
+    @include screen-max($mobile) {
+      cursor: pointer;
+    }
+    &--active {
+      background-color: $white;
+    }
+  }
+}

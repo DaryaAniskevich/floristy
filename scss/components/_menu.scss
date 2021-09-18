@@ -1,0 +1,125 @@
+.c-menu {
+  width: 100vw;
+  background-color: $bg-color;
+  padding: 95px 0 217px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+
+  @include screen-max($product-img-medium) {
+    padding: 75px 0 190px;
+  }
+  @include screen-max($tablet) {
+    padding: 37px 0 160px;
+  }
+  @include screen-max($mobile) {
+    padding: 35px 0 75px;
+  }
+  &--active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 212px;
+    @include screen-max($product-img-medium) {
+      margin-bottom: 150px;
+    }
+    @include screen-max($tablet) {
+      margin-bottom: 140px;
+    }
+    @include screen-max($mobile) {
+      margin-bottom: 70px;
+    }
+    &__logo {
+      width: 158px;
+      height: 49px;
+      @include screen-max($tablet) {
+        width: 137px;
+        height: 47px;
+      }
+      @include screen-max($mobile) {
+        width: 96px;
+        height: 29px;
+      }
+    }
+    &__close {
+      width: 28px;
+      height: 28px;
+      opacity: 0.5;
+      @include screen-max($tablet) {
+        width: 21px;
+        height: 21px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__item {
+      font-size: 35px;
+      line-height: 39px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 76px;
+      @include screen-max($product-img-medium) {
+        font-size: 33px;
+        line-height: 37px;
+        margin-bottom: 68px;
+      }
+      @include screen-max($tablet) {
+        font-size: 30px;
+        line-height: 33px;
+        margin-bottom: 64px;
+      }
+      @include screen-max($mobile) {
+        font-size: 15px;
+        line-height: 17px;
+        margin-bottom: 51px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        color: #ffffff;
+        transform: scale(1.2);
+      }
+    }
+  }
+  &-socials {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 95px;
+    left: 95px;
+    @include screen-max($tablet) {
+      display: none;
+    }
+    @include screen-max($mobile) {
+      display: none;
+    }
+    &__item {
+      margin-bottom: 23px;
+      opacity: 0.5;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

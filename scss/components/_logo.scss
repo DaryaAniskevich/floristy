@@ -1,0 +1,16 @@
+.c-logo {
+  max-width: 137px;
+  max-height: 47px;
+  @include screen-max($mobile) {
+    width: 96px;
+    height: 29px;
+  }
+  &-picture {
+    max-width: 137px;
+    max-height: 47px;
+    @include screen-max($mobile) {
+      width: 96px;
+      height: 29px;
+    }
+  }
+}

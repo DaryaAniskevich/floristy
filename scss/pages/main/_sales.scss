@@ -1,0 +1,82 @@
+.p-m-sales {
+  padding: 86px 0 170px;
+  @include screen-max($tablet) {
+    padding: 50px 0 100px;
+  }
+  &-layout {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include screen-max($tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+  &-discription {
+    max-width: 352px;
+    margin-right: 0px;
+    @include screen-max($tablet) {
+      max-width: 453px;
+      text-align: center;
+    }
+    @include screen-max($mobile) {
+      max-width: 288px;
+      text-align: left;
+    }
+    &__heading {
+      margin-bottom: 20px;
+      line-height: 170%;
+      @include screen-max($tablet) {
+        margin-bottom: 55px;
+      }
+      @include screen-max($mobile) {
+        margin-bottom: 20px;
+      }
+      &::after {
+        margin-top: 20px;
+        @include screen-max($tablet) {
+          position: absolute;
+          transform: translateX(-50%);
+          left: 50%;
+          margin-top: 15px;
+        }
+        @include screen-max($mobile) {
+          position: relative;
+          display: block;
+          transform: none;
+          left: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+    &__content {
+      font-size: 14px;
+      line-height: 170%;
+      margin-bottom: 45px;
+      @include screen-max($tablet) {
+        margin-bottom: 15px;
+      }
+      @include screen-max($tablet) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &-background {
+    width: 697px;
+    height: 410px;
+    background-image: url("../images/sales_1.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include screen-max($tablet) {
+      width: 453px;
+      height: 323px;
+      background-size: cover;
+      margin-bottom: 30px;
+    }
+    @include screen-max($mobile) {
+      width: 288px;
+      height: 170px;
+      background-size: cover;
+      margin-bottom: 25px;
+    }
+  }
+}

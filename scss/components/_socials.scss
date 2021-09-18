@@ -1,0 +1,12 @@
+.c-socials {
+  display: flex;
+  &__image {
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__item {
+    width: 25px;
+    height: 25px;
+  }
+}

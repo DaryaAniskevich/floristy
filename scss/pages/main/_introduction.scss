@@ -1,0 +1,115 @@
+.p-m-introduction {
+  padding: 189px 0 22px;
+  text-align: center;
+  @include screen-max($tablet) {
+    padding: 246px 0 54px;
+  }
+  @include screen-max($mobile) {
+    padding: 103px 0 40px;
+  }
+  &__heading {
+    font-size: 120px;
+    line-height: 132px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-weight: 400;
+    max-width: 818px;
+    margin: 0px auto 80px;
+    @include screen-max($tablet) {
+      width: 550px;
+      font-size: 70px;
+      line-height: 77px;
+      margin-bottom: 82px;
+    }
+    @include screen-max($mobile) {
+      width: 238px;
+      font-size: 30px;
+      line-height: 140%;
+      margin-bottom: 35px;
+    }
+  }
+  &__watch-button {
+    @include screen-max($tablet) {
+      margin-bottom: 211px;
+    }
+    @include screen-max($tablet) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    @include screen-max($tablet) {
+      align-items: center;
+      flex-direction: column;
+    }
+    &-catalog-btn {
+      @include screen-max($tablet) {
+        margin-left: -200px;
+      }
+      &__text {
+        @include screen-max($tablet) {
+          display: none;
+        }
+      }
+      &__arrow {
+        @include screen-max($tablet) {
+          margin-left: 0;
+          align-self: center;
+          width: 30px;
+          height: 40px;
+        }
+        @include screen-max($mobile) {
+          width: 14px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  &-socials {
+    flex-direction: column;
+    padding-top: 41px;
+    @include screen-max($tablet) {
+      flex-direction: row;
+      padding-top: 0px;
+      width: 460px;
+      justify-content: space-between;
+      margin-bottom: 35px;
+    }
+    @include screen-max($mobile) {
+      width: 260px;
+      margin-bottom: 10px;
+    }
+    &__item {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include screen-max($tablet) {
+        margin-bottom: 0;
+        background-color: $bg-color;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @include screen-max($mobile) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &__icon {
+      @include screen-max($tablet) {
+        width: 28px;
+        height: 28px;
+      }
+      @include screen-max($mobile) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
