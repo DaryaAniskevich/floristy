@@ -12,24 +12,15 @@ const rollSlider = (sliderBlockClass, count) => {
 
 sliderControlsBlock.addEventListener("click", (event) => {
   if (event.target.classList.contains("p-m-catalog-controls__item")) {
-    if (+event.target.id === 1 || count >= productCards.length) {
-      count = 0;
-    }
-
-    if (+event.target.id === 2) {
-      count = 1;
-    }
-    if (+event.target.id === 3) {
-      count = 2;
-    }
-    if (+event.target.id === 4) {
-      count = 3;
-    }
-
     sliderControls.forEach((item) => {
-      item.classList.remove("c-slider-controls__item--active");
+      if (event.target.id == item.id) {
+        count = item.id - 1;
+        event.target.classList.add("c-slider-controls__item--active");
+      } else {
+        item.classList.remove("c-slider-controls__item--active");
+      }
     });
-    event.target.classList.add("c-slider-controls__item--active");
+
     rollSlider(".p-m-catalog-list", count);
   }
 });
@@ -86,11 +77,9 @@ function handleTouchMove(event) {
     });
 
     rollSlider(".p-m-catalog-list", count);
-    x1 = null;
-    y1 = null;
-  } else {
-    x1 = null;
-    y1 = null;
-    return;
   }
+  x1 = null;
+  y1 = null;
+
+  return;
 }

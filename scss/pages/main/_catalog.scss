@@ -14,7 +14,7 @@
     color: #ffffff;
     opacity: 0.03;
     position: absolute;
-    top: 220px;
+    top: 240px;
     @include screen-max($tablet) {
       display: none;
     }

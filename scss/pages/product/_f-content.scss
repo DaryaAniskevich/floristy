@@ -54,7 +54,10 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         width: 996px;
         height: 95%;
-        @include screen-max($product-img-big) {
+        @include screen-max($product-img-extralarge) {
+          width: 850px;
+        }
+        @include screen-max($product-img-large) {
           width: 700px;
         }
         @include screen-max($product-img-medium) {
@@ -67,8 +70,10 @@
           display: none;
         }
       }
-
-      @include screen-max($product-img-big) {
+      @include screen-max($product-img-extralarge) {
+        max-width: 850px;
+      }
+      @include screen-max($product-img-large) {
         max-width: 700px;
       }
       @include screen-max($product-img-medium) {
@@ -92,7 +97,10 @@
         height: 100%;
         object-fit: cover;
         position: absolute;
-        @include screen-max($product-img-big) {
+        @include screen-max($product-img-extralarge) {
+          max-width: 850px;
+        }
+        @include screen-max($product-img-large) {
           max-width: 700px;
         }
         @include screen-max($product-img-medium) {

@@ -1,39 +1,39 @@
-const productExamples = document.querySelectorAll(
+const products = document.querySelectorAll(
   ".p-p-f-content-description-slider-images__item"
 );
-const productExamplesSlider = document.querySelector(
+const productSlider = document.querySelector(
   ".p-p-f-content-description-slider-images__block"
 );
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
-let countProductSlider = 0;
+let count = 0;
 let width = 0;
 
 const rollSlider = (sliderBlockClass, count) => {
   width = document.querySelector(sliderBlockClass).offsetWidth;
-  productExamplesSlider.style.transform = `translateX(-${width * count}px)`;
+  productSlider.style.transform = `translateX(-${width * count}px)`;
 };
 
 prevBtn.onclick = () => {
-  countProductSlider--;
-  if (countProductSlider <= 0) {
+  count--;
+  if (count <= 0) {
     prevBtn.classList.add("hide");
     nextBtn.classList.remove("hide");
   }
-  rollSlider(".p-p-f-content-description-slider-images", countProductSlider);
+  rollSlider(".p-p-f-content-description-slider-images", count);
 };
 
 nextBtn.onclick = () => {
-  countProductSlider++;
-  if (countProductSlider >= 1) {
+  count++;
+  if (count >= 1) {
     nextBtn.classList.add("hide");
     prevBtn.classList.remove("hide");
   }
-  rollSlider(".p-p-f-content-description-slider", countProductSlider);
+  rollSlider(".p-p-f-content-description-slider", count);
 };
 
-productExamplesSlider.addEventListener("touchstart", handleTouchStart, false);
-productExamplesSlider.addEventListener("touchmove", handleTouchMove, false);
+productSlider.addEventListener("touchstart", handleTouchStart, false);
+productSlider.addEventListener("touchmove", handleTouchMove, false);
 
 let x1 = null;
 let y1 = null;
@@ -56,23 +56,21 @@ function handleTouchMove(event) {
 
   if (Math.abs(xDiff) > Math.abs(yDiff)) {
     if (xDiff > 0) {
-      countProductSlider--;
-      if (countProductSlider <= 0) {
-        councountProductSlidert = 0;
+      count--;
+      if (count <= 0) {
+        count = 0;
       }
     } else {
-      countProductSlider++;
-      if (countProductSlider >= 2) {
-        countProductSlider = 0;
+      count++;
+      if (count >= 2) {
+        count--;
       }
     }
 
-    rollSlider(".p-p-f-content-description-slider", countProductSlider);
-    x1 = null;
-    y1 = null;
-  } else {
-    x1 = null;
-    y1 = null;
-    return;
+    rollSlider(".p-p-f-content-description-slider", count);
   }
+  x1 = null;
+  y1 = null;
+
+  return;
 }
